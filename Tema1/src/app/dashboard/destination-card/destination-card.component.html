@@ -1,0 +1,11 @@
+<div class="card-container">
+  <img [src]="destination.image" alt="image" />
+  <div class="text-area">
+    <h2>{{destination.title}}</h2>
+    <p>{{ destination.description }}</p>
+  </div>
+
+  <div class="button-container">
+    <button (click)="visit()">Visit now</button>
+  </div>
+</div>

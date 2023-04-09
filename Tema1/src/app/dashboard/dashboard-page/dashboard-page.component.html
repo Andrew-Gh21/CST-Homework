@@ -1,0 +1,25 @@
+<div class="main-page">
+
+  <div class="header-content">
+    <app-header [titleInput]="$selectedCity"></app-header>
+  </div>
+
+  <div class="search-bar-content">
+    <app-search-bar (searchEvent)="emitNewDestination($event)" ></app-search-bar>
+  </div>
+  <div class="SectionTitle">
+    <h1>Our Services</h1>
+  </div>
+  <div class="service-list-container">
+    <ng-container *ngFor="let service of services; let index = index">
+      <app-services-bar [service]="service"></app-services-bar>
+    </ng-container>
+  </div>
+
+  <h1 class="SectionTitle">Most Popular</h1>
+  <div class="list-container">
+    <ng-container *ngFor="let destination of destinations;">
+      <app-destination-card (selectedCity)="emitSelectedCity($event)" [destination]="destination"></app-destination-card>
+    </ng-container>
+  </div>
+</div>

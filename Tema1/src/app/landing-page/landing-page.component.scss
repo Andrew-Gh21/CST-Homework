@@ -1,0 +1,31 @@
+.content-landing-page{
+  height: 100%;
+  width: 100%;
+  overflow:hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../../assets/iceland-scenery.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+
+  .welcome-button{
+    height: 5%;
+    width: 7%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+
+    background-color: #a68f51;
+    box-shadow: 0 10px 0 rgb(135, 32, 32);
+    color: rgb(255, 255, 255);
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
