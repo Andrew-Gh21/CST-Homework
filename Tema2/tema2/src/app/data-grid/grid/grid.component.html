@@ -1,0 +1,23 @@
+<nz-table #basicTable [nzData]="listOfData">
+  <thead>
+    <ng-container *ngFor="let column of headerColumnNames">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> 
+        {{column | headerColumnNames}}
+      </th>
+    </ng-container>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{ data.Id }}</td>
+      <td>{{ data.FirstName }}</td>
+      <td>{{ data.LastName }}</td>
+      <td>{{ data.Address }}</td>
+      <td>{{ data.Gender }}</td>
+      <td>{{ data.RegistrationDate }}</td>
+      <td>{{ data.LastModified }}</td>
+      <td>
+        <a>edit icon</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

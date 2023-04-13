@@ -1,0 +1,14 @@
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Enter the details" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+  <ng-container *nzModalContent>
+    <form id="modalForm">
+      <label>First Name</label>
+      <input name="firstName" [(ngModel)]="formPerson.FirstName"/>
+      <label>Last Name</label>
+      <input name="lastName" [(ngModel)]="formPerson.LastName"/>
+      <label>Address</label>
+      <input name="address" [(ngModel)]="formPerson.Address"/>
+      <label>Age</label>
+      <input name="age" [(ngModel)]="formPerson.Age"/>
+    </form>
+  </ng-container>
+</nz-modal>

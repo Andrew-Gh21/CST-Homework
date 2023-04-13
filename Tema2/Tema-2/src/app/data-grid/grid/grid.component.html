@@ -1,0 +1,31 @@
+<div class="person-data">
+  <button class="add-button" nz-button [nzType]="'primary'" (click)="addPerson()"><span>Add</span></button>
+  <nz-table  
+    [nzData]="listOfData"
+    [nzFrontPagination]="false"
+    [nzLoading]="loading"
+    [nzTotal]="total"
+    [(nzPageSize)]="pageSize"
+    [nzPageIndex]="pageIndex"
+    (nzQueryParams)="onQueryParamsChange($event)">
+    <thead>
+      <tr>
+        <th *ngFor="let column of headerColumnNames">{{column | headerColumnNames}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of listOfData">
+        <td>{{ data.FirstName }}</td>
+        <td>{{ data.LastName }}</td>
+        <td>{{ data.Address }}</td>
+        <td>{{ data.Age }}</td>
+        <td>{{ data.RegistrationDate }}</td>
+        <td>{{ data.LastModified }}</td>
+        <td>
+          <a (click)="editPerson(data)">edit icon</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
+<app-template-modal (person)="personEmited($event)"></app-template-modal>
