@@ -22,7 +22,11 @@
         <td>{{ data.RegistrationDate }}</td>
         <td>{{ data.LastModified }}</td>
         <td>
-          <a (click)="editPerson(data)">edit icon</a>
+          <span
+          nz-icon
+          nzType="edit"
+          nzTheme="outline" 
+          (click)="editPerson(data)"></span>
         </td>
       </tr>
     </tbody>
